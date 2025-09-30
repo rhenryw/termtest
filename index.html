@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Terminator">
+  <meta name="viewport" content="width=device-width">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <meta name="generator" content="Astro v4.6.1">
+  <link rel="stylesheet" href=
+  "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+  integrity=
+  "sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com"
+  crossorigin="">
+  <link href=
+  "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap"
+  rel="stylesheet">
+  <link href=
+  "https://cdn.jsdelivr.net/npm/xterm@5.3.0/css/xterm.min.css" rel=
+  "stylesheet">
+  <title>Terminator by Aéza</title>
+  <style>
+  [data-simplebar]{align-content:flex-start;align-items:flex-start;flex-direction:column;flex-wrap:wrap;justify-content:flex-start;position:relative}.simplebar-wrapper{height:inherit;max-height:inherit;max-width:inherit;overflow:hidden;width:inherit}.simplebar-mask{direction:inherit;height:auto!important;overflow:hidden;width:auto!important;z-index:0}.simplebar-mask,.simplebar-offset{inset:0;margin:0;padding:0;position:absolute}.simplebar-offset{box-sizing:inherit!important;direction:inherit!important;resize:none!important;-webkit-overflow-scrolling:touch}.simplebar-content-wrapper{box-sizing:border-box!important;direction:inherit;display:block;height:100%;max-height:100%;max-width:100%;overflow:auto;position:relative;scrollbar-width:none;width:auto;-ms-overflow-style:none}.simplebar-content-wrapper::-webkit-scrollbar,.simplebar-hide-scrollbar::-webkit-scrollbar{display:none;height:0;width:0}.simplebar-content:after,.simplebar-content:before{content:" ";display:table}.simplebar-placeholder{max-height:100%;max-width:100%;pointer-events:none;width:100%}.simplebar-height-auto-observer-wrapper{box-sizing:inherit!important;flex-basis:0;flex-grow:inherit;flex-shrink:0;float:left;height:100%;margin:0;max-height:1px;max-width:1px;overflow:hidden;padding:0;pointer-events:none;position:relative;width:100%;z-index:-1}.simplebar-height-auto-observer{box-sizing:inherit;display:block;height:1000%;left:0;min-height:1px;min-width:1px;opacity:0;top:0;width:1000%;z-index:-1}.simplebar-height-auto-observer,.simplebar-track{overflow:hidden;pointer-events:none;position:absolute}.simplebar-track{bottom:0;right:0;z-index:1}[data-simplebar].simplebar-dragging,[data-simplebar].simplebar-dragging .simplebar-content{pointer-events:none;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}[data-simplebar].simplebar-dragging .simplebar-track{pointer-events:all}.simplebar-scrollbar{left:0;min-height:10px;position:absolute;right:0}.simplebar-scrollbar:before{background:#000;border-radius:7px;content:"";opacity:0;position:absolute;transition:opacity .2s linear .5s}.simplebar-scrollbar.simplebar-visible:before{opacity:.5;transition-delay:0s;transition-duration:0s}.simplebar-track.simplebar-vertical{top:0;width:11px}.simplebar-scrollbar:before{inset:2px}.simplebar-track.simplebar-horizontal{height:11px;left:0}.simplebar-track.simplebar-horizontal .simplebar-scrollbar{inset:0 auto 0 0;min-height:0;min-width:10px;width:auto}[data-simplebar-direction=rtl] .simplebar-track.simplebar-vertical{left:0;right:auto}.simplebar-dummy-scrollbar-size{direction:rtl;height:500px;opacity:0;overflow-x:scroll;overflow-y:hidden;position:fixed;visibility:hidden;width:500px;-ms-overflow-style:scrollbar!important}.simplebar-dummy-scrollbar-size>div{height:200%;margin:10px 0;width:200%}.simplebar-hide-scrollbar{left:0;overflow-y:scroll;position:fixed;scrollbar-width:none;visibility:hidden;-ms-overflow-style:none}/*!
+  * Toastify js 1.12.0
+  * https://github.com/apvarun/toastify-js
+  * @license MIT licensed
+  *
+  * Copyright (C) 2018 Varun A P
+  */.toastify{background:linear-gradient(135deg,#73a5ff,#5477f5);border-radius:2px;box-shadow:0 3px 6px -1px #0000001f,0 10px 36px -4px #4d60e84d;color:#fff;cursor:pointer;display:inline-block;max-width:calc(50% - 20px);opacity:0;padding:12px 20px;position:fixed;text-decoration:none;transition:all .4s cubic-bezier(.215,.61,.355,1);z-index:2147483647}.toastify.on{opacity:1}.toast-close{background:transparent;border:0;color:#fff;cursor:pointer;font-family:inherit;font-size:1em;opacity:.4;padding:0 5px}.toastify-right{right:15px}.toastify-left{left:15px}.toastify-top{top:-150px}.toastify-bottom{bottom:-150px}.toastify-rounded{border-radius:25px}.toastify-avatar{border-radius:2px;height:1.5em;margin:-7px 5px;width:1.5em}.toastify-center{left:0;margin-left:auto;margin-right:auto;max-width:fit-content;max-width:-moz-fit-content;right:0}@media only screen and (max-width:360px){.toastify-left,.toastify-right{left:0;margin-left:auto;margin-right:auto;max-width:-moz-fit-content;max-width:fit-content;right:0}}
+  </style>
+  <link rel="stylesheet" href="https://terminator.aeza.net/_astro/index.BPgRueEg.css">
+  <script type="module" src="https://cdn.jsdelivr.net/gh/rhenryw/termtest@main/term.js"></script>
+</head>
+<body>
+  <main data-astro-cid-ct3bgug4="">
+    <aside data-astro-cid-ssfzsv2f="">
+      <header data-astro-cid-3ef6ksr2="">
+        <h1 data-astro-cid-3ef6ksr2="">terminator</h1>
+        <section class="controls" data-astro-cid-3ef6ksr2="">
+          <a class="site-link" href=
+          "https://aeza.net/?ref=terminator" target="_blank"
+          data-astro-cid-3ef6ksr2="">
+          <p class="link-text" data-astro-cid-3ef6ksr2="">by
+          <img src="https://terminator.aeza.net/_astro/logo.MSA1BwmQ_Xq5Ie.svg" alt=
+          "aeza logotype e icon" data-astro-cid-3ef6ksr2="" width=
+          "24" height="24" loading="lazy" decoding="async">
+          aéza</p><svg class="arrow" width="14" height="12"
+          viewbox="0 0 14 12" fill="none" xmlns=
+          "http://www.w3.org/2000/svg" data-astro-cid-3ef6ksr2="">
+          <path d=
+          "M1.90057 11.4489L0.813921 10.142L9.99716 2.25142H3.96023L4.27273 0.454545H13.3991L11.8864 9.58807H10.0753L11.0838 3.55114L1.90057 11.4489Z"
+          fill="black" data-astro-cid-3ef6ksr2></path></svg></a>
+          <div class="switcher" style="margin-left:16px"
+          data-astro-cid-dkurt46j="">
+            <div class="header" data-astro-cid-dkurt46j="">
+              <picture><source srcset=
+              "https://terminator.aeza.net/_astro/globe.BXOIQ_-4_2wuhD8.webp" type=
+              "image/webp"> <img src=
+              "https://terminator.aeza.net/_astro/globe.BXOIQ_-4_d8K73.png" class="picker"
+              alt="Picture contains globe. Used to change language"
+              draggable="false" data-astro-cid-dkurt46j="" width=
+              "32" height="32" loading="lazy" decoding=
+              "async"></picture>
+            </div>
+            <div class="wrapper" data-astro-cid-dkurt46j="">
+              <ul class="languages" data-astro-cid-dkurt46j="">
+                <li class="language" data-astro-cid-dkurt46j="">
+                  <a class="language-link" href="/ru/" data-lang=
+                  "ru" data-astro-cid-dkurt46j="">русский</a>
+                </li>
+                <li class="language" data-astro-cid-dkurt46j="">
+                  <a class="language-link language-link_active"
+                  href="/en/" data-lang="en"
+                  data-astro-cid-dkurt46j="">english</a>
+                </li>
+                <li class="language" data-astro-cid-dkurt46j="">
+                  <a class="language-link" href="/uk/" data-lang=
+                  "uk" data-astro-cid-dkurt46j="">українська</a>
+                </li>
+              </ul>
+            </div>
+          </div><button class="switcher" id="theme-picker" style=
+          "margin-left:16px" data-astro-cid-dz5h74bc=
+          ""><picture><source srcset=
+          "https://terminator.aeza.net/_astro/cube.tqPawN8C_ZRyOh5.webp" type="image/webp">
+          <img src="https://terminator.aeza.net/_astro/cube.tqPawN8C_Z1vIk7x.png" alt=
+          "Picture contains key. Used to change color theme"
+          draggable="false" data-astro-cid-dz5h74bc="" width="32"
+          height="32" loading="lazy" decoding=
+          "async"></picture></button>
+        </section>
+      </header><button class="hide-sidebar"
+      data-astro-cid-b22c4mrw=""><svg width="25px" height="25px"
+      viewbox="0 0 1024 1024" version="1.1" xmlns=
+      "http://www.w3.org/2000/svg" data-astro-cid-b22c4mrw="">
+      <path fill="#E1E1E1" d=
+      "M435.8 512L690 258c18.8-18.8 18.8-49.2 0-67.8-18.8-18.8-49.2-18.6-68 0L334 478c-18.2 18.2-18.6 47.4-1.4 66.2L621.8 834c9.4 9.4 21.8 14 34 14s24.6-4.6 34-14c18.8-18.8 18.8-49.2 0-67.8L435.8 512z"
+      data-astro-cid-b22c4mrw></path></svg></button>
+      <ul class="cards" data-simplebar="" data-astro-cid-ssfzsv2f=
+      "">
+        <li class="card" style=
+        "color:#ffffff;background-image:url(/_astro/terminator.CFa1Drj3.gif);background-size:cover;min-height:231px"
+        data-astro-cid-6xvp7lqp="">
+          <div class="card-body" data-astro-cid-6xvp7lqp="">
+            <img src="https://terminator.aeza.net/_astro/1.Djc3jqhP_2866S5.svg" style=
+            "margin-left: auto;" draggable="false" alt=
+            "Card identifier" data-astro-cid-6xvp7lqp="" width="29"
+            height="28" loading="lazy" decoding="async">
+            <div class="card-content" data-astro-cid-6xvp7lqp="">
+              <p class="card-text" data-astro-cid-43m6q2ob="">
+              virtual machine for anything, anytime, free</p>
+            </div>
+          </div>
+          <div class="card-footer" data-astro-cid-6xvp7lqp="">
+          </div>
+        </li>
+        <li class="card" data-astro-cid-6xvp7lqp="">
+          <div class="card-body" data-astro-cid-6xvp7lqp="">
+            <img src="https://terminator.aeza.net/_astro/2.B8hZzQpD_1qDFoP.svg" style=
+            "margin-left: auto;" draggable="false" alt=
+            "Card identifier" data-astro-cid-6xvp7lqp="" width="29"
+            height="28" loading="lazy" decoding="async">
+            <div class="card-content" data-astro-cid-6xvp7lqp="">
+              <div style=
+              "display: flex; align-items: end; margin-bottom: 8px;">
+                <picture><source srcset=
+                "https://terminator.aeza.net/_astro/clickmouse.BcILKlt-_Z9jhPY.webp" type=
+                "image/webp"> <img src=
+                "https://terminator.aeza.net/_astro/clickmouse.BcILKlt-_Z1mJ5Hf.png" alt=
+                "Computer mouse" width="143" height="82" loading=
+                "lazy" decoding="async"></picture>
+                <picture><source srcset=
+                "https://terminator.aeza.net/_astro/clock.B-UWdMsl_zk4Vn.webp" type=
+                "image/webp"> <img src=
+                "https://terminator.aeza.net/_astro/clock.B-UWdMsl_1gMbWq.png" alt="Clock"
+                style="margin-left: 16px;" width="48" height="48"
+                loading="lazy" decoding="async"></picture>
+              </div>
+              <p class="card-text" data-astro-cid-43m6q2ob="">
+              session expires in 15 minutes. Feel free to create a
+              new one right away</p>
+            </div>
+          </div>
+          <div class="card-footer" data-astro-cid-6xvp7lqp="">
+          </div>
+        </li>
+        <li class="card" data-astro-cid-6xvp7lqp="">
+          <div class="card-body" data-astro-cid-6xvp7lqp="">
+            <img src="https://terminator.aeza.net/_astro/3.CVgpBMsJ_H9N8D.svg" style=
+            "margin-left: auto;" draggable="false" alt=
+            "Card identifier" data-astro-cid-6xvp7lqp="" width="29"
+            height="28" loading="lazy" decoding="async">
+            <div class="card-content" data-astro-cid-6xvp7lqp="">
+              <div style=
+              "display: flex; flex-direction: column; margin-bottom: 8px;">
+                <picture><source srcset=
+                "https://terminator.aeza.net/_astro/dolphins.BP1ueQDs_1pCaLe.webp" type=
+                "image/webp"> <img src=
+                "https://terminator.aeza.net/_astro/dolphins.BP1ueQDs_Z82eQO.png" alt=
+                "Dolphins" width="110" height="83" loading="lazy"
+                decoding="async"></picture>
+                <picture><source srcset="https://terminator.aeza.net/_astro/water.BTKqm-c__Z19rOyF.webp"
+                type="image/webp"> <img src=
+                "https://terminator.aeza.net/_astro/water.BTKqm-c__Z1MBkp8.png" alt=
+                "Water carpet" width="127" height="64" loading=
+                "lazy" decoding="async"></picture>
+              </div>
+              <p class="card-text" data-astro-cid-43m6q2ob="">no
+              registration or SMS</p>
+            </div>
+          </div>
+          <div class="card-footer" data-astro-cid-6xvp7lqp="">
+          </div>
+        </li>
+        <li class="card" data-astro-cid-6xvp7lqp="">
+          <div class="card-body" data-astro-cid-6xvp7lqp="">
+            <img src="https://terminator.aeza.net/_astro/4.D7NWzmF6_Z2kFYQl.svg" style=
+            "margin-left: auto;" draggable="false" alt=
+            "Card identifier" data-astro-cid-6xvp7lqp="" width="29"
+            height="28" loading="lazy" decoding="async">
+            <div class="card-content" data-astro-cid-6xvp7lqp="">
+              <div style=
+              "display: flex; align-items: top; margin-bottom: 8px;">
+              <picture><source srcset=
+              "https://terminator.aeza.net/_astro/mac.DMC1UOcT_ZXP2M7.webp" type="image/webp">
+              <img src="/_astro/mac.DMC1UOcT_1M0yuJ.png" alt="Mac"
+              width="100" height="100" loading="lazy" decoding=
+              "async"></picture> <img src=
+              "https://terminator.aeza.net/_astro/memory-card.D6gsvs4n_1Vxzw3.gif" alt=
+              "Memory card" width="100" height="110" loading="lazy"
+              decoding="async"></div>
+              <p class="card-text" data-astro-cid-43m6q2ob="">more
+              powerful than a multicooker:<br>
+              4 cores 2.4+ Ghz, 4GB, 40GB SSD, 200Mbps</p>
+            </div>
+          </div>
+          <div class="card-footer" data-astro-cid-6xvp7lqp="">
+          </div>
+        </li>
+        <li class="card" data-astro-cid-6xvp7lqp="">
+          <div class="card-body" data-astro-cid-6xvp7lqp="">
+            <img src="https://terminator.aeza.net/_astro/5.CMuqDGlS_234HCe.svg" style=
+            "margin-left: auto;" draggable="false" alt=
+            "Card identifier" data-astro-cid-6xvp7lqp="" width="29"
+            height="28" loading="lazy" decoding="async">
+            <div class="card-content" data-astro-cid-6xvp7lqp="">
+              <picture><source srcset=
+              "https://terminator.aeza.net/_astro/os.Civ-thY6_18Ac8F.webp" type="image/webp">
+              <img src="https://terminator.aeza.net/_astro/os.Civ-thY6_ZcQnbN.png" style=
+              "margin-bottom: 8px;" alt="Operating systems" width=
+              "77" height="180" loading="lazy" decoding=
+              "async"></picture>
+              <p class="card-text" data-astro-cid-43m6q2ob="">two
+              operating systems to choose on: Windows Server 2022
+              and Debian 12</p>
+            </div>
+          </div>
+          <div class="card-footer" data-astro-cid-6xvp7lqp="">
+          </div>
+        </li>
+        <li class="card" data-astro-cid-sr76vcv2=""
+        data-astro-cid-6xvp7lqp="">
+          <div class="card-body" data-astro-cid-6xvp7lqp="">
+            <img src="https://terminator.aeza.net/_astro/iframe.smDeGPLw_ZQJKIo.svg" style=
+            "margin-left: auto;" draggable="false" alt=
+            "Card identifier" data-astro-cid-6xvp7lqp="" width=
+            "161" height="28" loading="lazy" decoding="async">
+            <div class="card-content" data-astro-cid-6xvp7lqp="">
+              <div style=
+              "display: flex; align-items: center; margin-bottom: 8px;"
+              data-astro-cid-sr76vcv2="">
+                <img src="https://terminator.aeza.net/_astro/blocks.D66fwBlW_EH0al.svg" alt=
+                "Blocks" data-astro-cid-sr76vcv2="" width="112"
+                height="80" loading="lazy" decoding="async">
+                <picture><source srcset=
+                "https://terminator.aeza.net/_astro/sweeper.D8w_JObR_Z9WTxX.webp" type=
+                "image/webp"> <img src=
+                "https://terminator.aeza.net/_astro/sweeper.D8w_JObR_Z2tjr53.png" alt=
+                "Sweeper" style="margin-left: 16px;"
+                data-astro-cid-sr76vcv2="" width="80" height="80"
+                loading="lazy" decoding="async"></picture>
+              </div>
+              <p class="card-text" data-astro-cid-43m6q2ob="">
+              integrate a terminator by aéza<br>
+              on your website</p>
+            </div>
+          </div>
+          <div class="card-footer" data-astro-cid-6xvp7lqp="">
+            <div class="code-block" id="code-block"
+            data-astro-cid-sr76vcv2="">
+              <code data-astro-cid-sr76vcv2=""><span class=
+              "hljs-tag">&lt;<span class="hljs-name">iframe</span>
+              <span class="hljs-attr">src</span>=<span class=
+              "hljs-string">”https://terminator.aeza.net”</span>
+              <span class="hljs-attr">width</span>=<span class=
+              "hljs-string">”100%”</span> <span class=
+              "hljs-attr">height</span>=<span class=
+              "hljs-string">”100%”</span>&gt;</span><span class=
+              "hljs-tag">&lt;/<span class=
+              "hljs-name">iframe</span>&gt;</span></code>
+              <button class="copy-button" id="copy-button"
+              data-copytext="copy" data-copiedtext="copied"
+              data-astro-cid-sr76vcv2="">copy</button>
+            </div>
+          </div>
+        </li>
+        <li class="card" data-astro-cid-62eitjxg=""
+        data-astro-cid-6xvp7lqp="">
+          <div class="card-body" data-astro-cid-6xvp7lqp="">
+            <img src="https://terminator.aeza.net/_astro/by-aeza.DKAOnIph_1HqpHn.svg" style=
+            "margin-left: auto;" draggable="false" alt=
+            "Card identifier" data-astro-cid-6xvp7lqp="" width=
+            "172" height="28" loading="lazy" decoding="async">
+            <div class="card-content" data-astro-cid-6xvp7lqp="">
+              <picture><source srcset=
+              "https://terminator.aeza.net/_astro/lightning.pfwJueM0_Z22hcWF.webp" type=
+              "image/webp"> <img src=
+              "https://terminator.aeza.net/_astro/lightning.pfwJueM0_1Ou800.png" alt="Blocks"
+              style="margin-bottom:8px" data-astro-cid-62eitjxg=""
+              width="174" height="174" loading="lazy" decoding=
+              "async"></picture>
+              <p class="card-text" data-astro-cid-43m6q2ob="">built
+              by aéza. peace of mind with free custom hardware
+              protection. 24/7 support that's always there to help
+              you</p>
+            </div>
+          </div>
+          <div class="card-footer" data-astro-cid-6xvp7lqp="">
+            <div class="code-block" id="code-block"
+            data-astro-cid-62eitjxg="">
+              <a class="site-link" href=
+              "https://aeza.net/?ref=terminator" target="_blank"
+              data-astro-cid-62eitjxg="">check the server from
+              0.2€/hr</a>
+            </div>
+          </div>
+        </li>
+        <div class="cards-footer" data-astro-cid-ssfzsv2f="">
+          <picture><source srcset=
+          "/_astro/fan.ropKkb2V_1Izs1m.webp" type="image/webp">
+          <img src="/_astro/fan.ropKkb2V_ZBagrK.png" alt=
+          "Fan. Just a regular fan. No jokes" style=
+          "align-self: flex-end; margin-bottom: 13px; margin-right: 15px;"
+          data-astro-cid-ssfzsv2f="" width="45" height="53"
+          loading="lazy" decoding="async"></picture>
+          <picture><source srcset=
+          "/_astro/chair.DpbjuXgC_Z17Vkm3.webp" type="image/webp">
+          <img src="/_astro/chair.DpbjuXgC_15zmnJ.png" alt="Chair"
+          data-astro-cid-ssfzsv2f="" width="106" height="116"
+          loading="lazy" decoding="async"></picture>
+          <p class="footer-text" data-astro-cid-ssfzsv2f="">
+          tired?<br data-astro-cid-ssfzsv2f="">
+          take a seat</p>
+        </div>
+      </ul>
+    </aside>
+    <article id="window" data-astro-cid-ct3bgug4="">
+      <button class="fullscreen-button" data-astro-cid-ctt5i43z=
+      ""><svg width="24" height="24" viewbox="0 0 24 24" fill=
+      "none" xmlns="http://www.w3.org/2000/svg"
+      data-astro-cid-ctt5i43z="">
+      <path d="M1 9V1H9" stroke="black" stroke-width="2"
+      data-astro-cid-ctt5i43z></path>
+      <path d="M1 15V23H9" stroke="black" stroke-width="2"
+      data-astro-cid-ctt5i43z></path>
+      <path d="M23 9V1H15" stroke="black" stroke-width="2"
+      data-astro-cid-ctt5i43z></path>
+      <path d="M23 15V23H15" stroke="black" stroke-width="2"
+      data-astro-cid-ctt5i43z></path></svg></button>
+      <div class="container" data-astro-cid-ct3bgug4="">
+        <p class="queue" data-astro-cid-ct3bgug4=""></p>
+        <div class="buttons" data-astro-cid-ct3bgug4="">
+          <button class="button" data-type="windows"
+          data-astro-cid-ct3bgug4="">windows</button>
+          <button class="button" data-type="linux"
+          data-astro-cid-ct3bgug4="">debian</button>
+        </div>
+        <div id="captcha" style="display: none"
+        data-astro-cid-ct3bgug4=""></div>
+        <div class="terminal" id="terminal" style=
+        "display: none; visibility: hidden;"
+        data-astro-cid-ct3bgug4=""></div>
+      </div>
+      <div class="footer" data-astro-cid-ct3bgug4="">
+        <p class="footer-text" id="timer" data-astro-cid-ct3bgug4=
+        ""></p><button class="stop-button" data-astro-cid-ct3bgug4=
+        ""><picture><source srcset=
+        "https://terminator.aeza.nett/_astro/bin.CJRgIcyU_Fns7C.webp" type="image/webp">
+        <img src="https://terminator.aeza.net/_astro/bin.CJRgIcyU_1mPz8F.png" alt="Trash can"
+        data-astro-cid-ct3bgug4="" width="32" height="32" loading=
+        "lazy" decoding="async"></picture>
+        <span data-astro-cid-ct3bgug4="">delete
+        session</span></button>
+        <p class="footer-text" data-astro-cid-ct3bgug4=""><span id=
+        "ping-text" data-astro-cid-ct3bgug4="">...</span> ms</p>
+      </div>
+    </article>
+  </main>
+  <script src="https://js.hcaptcha.com/1/api.js"
+  async defer></script> 
+  <!-- <script is:inline src="https://www.google.com/recaptcha/api.js?render=explicit"></script> -->
+  <!-- Yandex.Metrika counter --> 
+  <script type="text/javascript">
+
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(96612885, "init", {
+                         clickmap:true,
+                         trackLinks:true,
+                         accurateTrackBounce:true,
+                         webvisor:true
+        });
+  </script> <noscript>
+  <div><img src="https://mc.yandex.ru/watch/96612885" style=
+  "position:absolute; left:-9999px;" alt=""></div></noscript> 
+  <!-- /Yandex.Metrika counter -->
+</body>
+</html>
